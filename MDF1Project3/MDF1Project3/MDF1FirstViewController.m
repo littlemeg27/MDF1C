@@ -98,34 +98,13 @@
         ApplicationState *theAppState = [ApplicationState sharedApplicationState];
         
         CustomObject *mapInfo = [theAppState.businessArray objectAtIndex:indexPath.row];
-        MyMapAnnotation *anno = [[MyMapAnnotation alloc]initWithTitle:mapInfo.nameOfBusiness coord:CLLocationCoordinate2DMake(mapInfo.latitudeOfBusiness, mapInfo.longitudeOfBusiness)];
-        
-        if(theAppState != nil)
-        {
-            [mapView addAnnotation:anno];
-        }
-
         
         //Add things it does right here when going into the second tab
-        //individualMapView.anno = [theAppState.businessArray objectAtIndex:indexPath.row]; //Show the name on the detail page
+        individualMapView.mapInfo = [theAppState.businessArray objectAtIndex:indexPath.row]; //Show the name on the detail page
         [self presentViewController:individualMapView animated:YES completion:nil];
         //[detailView updateUILabel];//Not sure if i need this becuase im not updating a UILabel but i need to update the map
     }
 }
-
-/*- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
-{
-    DetailViewController *detailView = [[DetailViewController alloc] initWithNibName:@"DetailView" bundle:nil]; //Pop to the detail page
-    
-    if(detailView !=nil)
-    {
-        detailView.name = [array1 objectAtIndex:indexPath.row]; //Show the name on the detail page
-        detailView.linkName = [array2 objectAtIndex:indexPath.row]; //Show the team on the detail page
-        [self presentViewController:detailView animated:YES completion:nil];
-        [detailView updateUILabel];
-    }
-}*/
-
 
 
 -(IBAction)editButton:(id)sender

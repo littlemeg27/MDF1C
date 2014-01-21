@@ -46,6 +46,21 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    ApplicationState *theAppState = [ApplicationState sharedApplicationState];
+    
+    CustomObject *mapInfo = [theAppState.businessArray objectAtIndex:indexPath.row];
+    MyMapAnnotation *anno = [[MyMapAnnotation alloc]initWithTitle:mapInfo.nameOfBusiness coord:CLLocationCoordinate2DMake(mapInfo.latitudeOfBusiness, mapInfo.longitudeOfBusiness)];
+    
+    if(theAppState != nil)
+    {
+        [mapView addAnnotation:anno];
+    }
+    
+    [super viewDidAppear:animated];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
