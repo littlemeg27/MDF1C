@@ -108,7 +108,7 @@
         
         //Add things it does right here when going into the second tab
         //individualMapView.anno = [theAppState.businessArray objectAtIndex:indexPath.row]; //Show the name on the detail page
-        [self presentViewController:detailView animated:YES completion:nil];
+        [self presentViewController:individualMapView animated:YES completion:nil];
         //[detailView updateUILabel];//Not sure if i need this becuase im not updating a UILabel but i need to update the map
     }
 }
