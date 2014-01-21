@@ -49,7 +49,6 @@ static ApplicationState  *_sharedApplicationState = nil;
     if((self = [super init]))
     {
         //Things we need to save for the singleton go in here
-        
         CustomObject *business1 = [[CustomObject alloc] initWithNameName:@"Best Buy Pineville" longitude:-80.892296 latitude:35.083201];
         CustomObject *business2 = [[CustomObject alloc] initWithNameName:@"Pat-a-cakes Bakery" longitude:-81.042837 latitude:34.951758];
         CustomObject *business3 = [[CustomObject alloc] initWithNameName:@"BreadSmith" longitude:-80.978080 latitude:35.037729];

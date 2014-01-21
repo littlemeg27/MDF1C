@@ -11,6 +11,7 @@
 #import "MDF1SecondViewController.h"
 #import "CustomObject.h"
 #import "MyMapAnnotation.h"
+#import "DetailViewController.h"
 
 @interface MDF1FirstViewController ()
 
@@ -23,7 +24,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-        self.title = NSLocalizedString(@"First", @"First");
+        self.title = NSLocalizedString(@"Map TabView", @"Map TabView");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
     return self;
@@ -54,12 +55,11 @@
     {
         NSLog(@"I want to delete: %d", indexPath.row);
         
+        ApplicationState *theAppState = [ApplicationState sharedApplicationState];
+        
         //Replace with object
-        //[mapObject.nameOfBusiness removeObjectAtIndex:indexPath.row]; //Need help right here.
-                                                                        //Not sure how to call instead of stringArray1
-        
-        
-  //      [tableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:TRUE];
+        [theAppState.businessArray removeObjectAtIndex:indexPath.row]; 
+        [tableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:TRUE];
     }
 }
 
@@ -84,20 +84,48 @@
     ApplicationState *theAppState = [ApplicationState sharedApplicationState];
     
     CustomObject *mapObject = [theAppState.businessArray objectAtIndex:indexPath.row];
-    cellRow.textLabel.text = [mapObject valueForKey:mapObject.nameOfBusiness];
+    cellRow.textLabel.text = mapObject.nameOfBusiness;
     
     return cellRow;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    MDF1SecondViewController *mapView = [[MDF1SecondViewController alloc] initWithNibName:@"MDF1SecondViewController" bundle:nil]; //Pop to the map page
+    DetailViewController *individualMapView = [[DetailViewController alloc] initWithNibName:@"DetailView" bundle:nil]; //Pop to the map page
     
-    if(mapView !=nil)
+    if(individualMapView !=nil)
     {
+        ApplicationState *theAppState = [ApplicationState sharedApplicationState];
+        
+        CustomObject *mapInfo = [theAppState.businessArray objectAtIndex:indexPath.row];
+        MyMapAnnotation *anno = [[MyMapAnnotation alloc]initWithTitle:mapInfo.nameOfBusiness coord:CLLocationCoordinate2DMake(mapInfo.latitudeOfBusiness, mapInfo.longitudeOfBusiness)];
+        
+        if(theAppState != nil)
+        {
+            [mapView addAnnotation:anno];
+        }
+
+        
         //Add things it does right here when going into the second tab
+        //individualMapView.anno = [theAppState.businessArray objectAtIndex:indexPath.row]; //Show the name on the detail page
+        [self presentViewController:detailView animated:YES completion:nil];
+        //[detailView updateUILabel];//Not sure if i need this becuase im not updating a UILabel but i need to update the map
     }
 }
+
+/*- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    DetailViewController *detailView = [[DetailViewController alloc] initWithNibName:@"DetailView" bundle:nil]; //Pop to the detail page
+    
+    if(detailView !=nil)
+    {
+        detailView.name = [array1 objectAtIndex:indexPath.row]; //Show the name on the detail page
+        detailView.linkName = [array2 objectAtIndex:indexPath.row]; //Show the team on the detail page
+        [self presentViewController:detailView animated:YES completion:nil];
+        [detailView updateUILabel];
+    }
+}*/
+
 
 
 -(IBAction)editButton:(id)sender

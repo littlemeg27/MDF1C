@@ -34,6 +34,8 @@
 		BAA8BBEA1833EE910057E001 /* ApplicationState.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA8BBE91833EE910057E001 /* ApplicationState.m */; };
 		BAA8BBED183449040057E001 /* CustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA8BBEC183449030057E001 /* CustomObject.m */; };
 		BAA8BBEF183499420057E001 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA8BBEE183499420057E001 /* MapKit.framework */; };
+		BAC03A93188F189000F457C0 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC03A92188F189000F457C0 /* DetailView.xib */; };
+		BAC03A96188F18C100F457C0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC03A95188F18C100F457C0 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,9 @@
 		BAA8BBEB183449030057E001 /* CustomObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomObject.h; sourceTree = "<group>"; };
 		BAA8BBEC183449030057E001 /* CustomObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomObject.m; sourceTree = "<group>"; };
 		BAA8BBEE183499420057E001 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BAC03A92188F189000F457C0 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		BAC03A94188F18C100F457C0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		BAC03A95188F18C100F457C0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +171,9 @@
 				BAA8BBEC183449030057E001 /* CustomObject.m */,
 				BA57A8DE1835BB2F002328F1 /* MyMapAnnotation.h */,
 				BA57A8DF1835BB2F002328F1 /* MyMapAnnotation.m */,
+				BAC03A94188F18C100F457C0 /* DetailViewController.h */,
+				BAC03A95188F18C100F457C0 /* DetailViewController.m */,
+				BAC03A92188F189000F457C0 /* DetailView.xib */,
 			);
 			path = MDF1Project3;
 			sourceTree = "<group>";
@@ -285,6 +293,7 @@
 				BAA8BBBE1833EAA00057E001 /* second@2x.png in Resources */,
 				BAA8BBC41833EAA00057E001 /* MDF1FirstViewController_iPad.xib in Resources */,
 				BAA8BBCA1833EAA00057E001 /* MDF1SecondViewController_iPad.xib in Resources */,
+				BAC03A93188F189000F457C0 /* DetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +335,7 @@
 				BAA8BBEA1833EE910057E001 /* ApplicationState.m in Sources */,
 				BAA8BBED183449040057E001 /* CustomObject.m in Sources */,
 				BA57A8E01835BB2F002328F1 /* MyMapAnnotation.m in Sources */,
+				BAC03A96188F18C100F457C0 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

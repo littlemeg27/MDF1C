@@ -1,33 +1,32 @@
 //
-//  MDF1SecondViewController.m
+//  DetailViewController.m
 //  MDF1Project3
 //
-//  Created by Brenna Pavlinchak on 1/20/14.
+//  Created by Brenna Pavlinchak on 1/21/14.
 //  Copyright (c) 2014 Brenna Pavlinchak. All rights reserved.
 //
 
-#import "MDF1SecondViewController.h"
+#import "DetailViewController.h"
+#import "MDF1FirstViewController.h"
 #import "ApplicationState.h"
 #import "MyMapAnnotation.h"
 #import "CustomObject.h"
 
-
-@interface MDF1SecondViewController ()
+@interface DetailViewController ()
 
 @end
 
-@implementation MDF1SecondViewController
+@implementation DetailViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Map View", @"Map View");
-        self.tabBarItem.image = [UIImage imageNamed:@"second"];
+        // Custom initialization
     }
     return self;
 }
-							
+
 - (void)viewDidLoad
 {
     MKCoordinateSpan span; //The zoom level of the map
@@ -45,25 +44,6 @@
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-}
-
--(void) viewDidAppear:(BOOL)animated
-{
-    
-    ApplicationState *theAppState = [ApplicationState sharedApplicationState];
-    
-    for (int i = 0; i <= 9; i++)
-    {
-        CustomObject *mapInfo = [theAppState.businessArray objectAtIndex:i];
-        MyMapAnnotation *anno = [[MyMapAnnotation alloc]initWithTitle:mapInfo.nameOfBusiness coord:CLLocationCoordinate2DMake(mapInfo.latitudeOfBusiness, mapInfo.longitudeOfBusiness)];
-    
-        if(theAppState != nil)
-        {
-            [mapView addAnnotation:anno];
-        }
-    }
-
-    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning

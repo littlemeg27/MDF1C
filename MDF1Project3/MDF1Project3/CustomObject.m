@@ -12,7 +12,7 @@
 
 @synthesize nameOfBusiness, longitudeOfBusiness, latitudeOfBusiness;
 
--(id)initWithNameName:(NSString*)name  longitude:(float)longitude latitude:(float)latitude
+-(id)initWithNameName:(NSString*)name longitude:(float)longitude latitude:(float)latitude
 {
     if((self = [super init]))
     {
