@@ -52,7 +52,7 @@
     
     ApplicationState *theAppState = [ApplicationState sharedApplicationState];
     
-    for (int i = 0; i <= 9; i++)
+    for (int i = 0; i <= 11; i++)
     {
         CustomObject *mapInfo = [theAppState.businessArray objectAtIndex:i];
         MyMapAnnotation *anno = [[MyMapAnnotation alloc]initWithTitle:mapInfo.nameOfBusiness coord:CLLocationCoordinate2DMake(mapInfo.latitudeOfBusiness, mapInfo.longitudeOfBusiness)];

@@ -12,6 +12,9 @@
 @interface DetailViewController : UIViewController
 {
     IBOutlet MKMapView *mapView;
+    IBOutlet UIButton* backButton;
 }
+
+-(IBAction)backButton:(id)sender;
 
 @end
