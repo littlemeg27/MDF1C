@@ -99,6 +99,7 @@
         ApplicationState *theAppState = [ApplicationState sharedApplicationState];
         
         CustomObject *mapInfo = [theAppState.businessArray objectAtIndex:indexPath.row];
+        MyMapAnnotation *anno = [[MyMapAnnotation alloc]initWithTitle:mapInfo.nameOfBusiness coord:CLLocationCoordinate2DMake(mapInfo.latitudeOfBusiness, mapInfo.longitudeOfBusiness)];
         //individualMapView.mapInfo = [theAppState.businessArray objectAtIndex:indexPath.row]; //Show the name on the detail page
         [self presentViewController:individualMapView animated:YES completion:nil];
         //[detailView updateUILabel];//Not sure if i need this becuase im not updating a UILabel but i need to update the map

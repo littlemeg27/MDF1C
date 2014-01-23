@@ -15,6 +15,10 @@
     IBOutlet UIButton* backButton;
 }
 
+@property(nonatomic, copy) NSString* nameOfBusiness;
+
+
+
 -(IBAction)backButton:(id)sender;
 
 @end
