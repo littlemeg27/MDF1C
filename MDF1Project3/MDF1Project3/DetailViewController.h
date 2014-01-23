@@ -15,6 +15,10 @@
     IBOutlet UIButton* backButton;
 }
 
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *latit;
+@property (nonatomic, copy) NSString *longi;
+
 
 -(IBAction)backButton:(id)sender;
 
