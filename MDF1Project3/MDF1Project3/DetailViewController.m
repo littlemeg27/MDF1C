@@ -18,7 +18,7 @@
 
 @implementation DetailViewController
 
-@synthesize mapInfo;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
