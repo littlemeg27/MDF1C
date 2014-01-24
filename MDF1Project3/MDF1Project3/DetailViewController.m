@@ -18,9 +18,11 @@
 
 @implementation DetailViewController
 
-@synthesize name;
-@synthesize latit;
-@synthesize longi;
+//@synthesize name;
+//@synthesize latit;
+//@synthesize longi;
+@synthesize mapInfo;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -54,9 +56,8 @@
 {
     ApplicationState *theAppState = [ApplicationState sharedApplicationState];
     
-    CustomObject *mapInfo = [theAppState.businessArray objectAtIndex:0];
     MyMapAnnotation *anno = [[MyMapAnnotation alloc]initWithTitle:mapInfo.nameOfBusiness coord:CLLocationCoordinate2DMake(mapInfo.latitudeOfBusiness, mapInfo.longitudeOfBusiness)];
-    NSLog(@"Map info %@", name);
+
     
     if(theAppState != nil)
     {
