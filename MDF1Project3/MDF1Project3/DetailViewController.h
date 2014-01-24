@@ -8,17 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "CustomObject.h"
 
 @interface DetailViewController : UIViewController
 {
     IBOutlet MKMapView *mapView;
-    IBOutlet UIButton* backButton;
+    IBOutlet UIButton *backButton;
+    IBOutlet UILabel *nameLabel;
+    IBOutlet UILabel *LatitudeLabel;
+    IBOutlet UILabel *LongitudeLabel;
 }
 
-//@property (nonatomic, copy) NSString *name;
-//@property (nonatomic) float *latit;
-//@property (nonatomic) float *longi;
-@property (nonatomic) NSObject *mapInfo;
+@property (nonatomic) CustomObject *mapInfo;
 
 
 -(IBAction)backButton:(id)sender;

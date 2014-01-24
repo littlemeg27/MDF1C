@@ -18,9 +18,6 @@
 
 @implementation DetailViewController
 
-//@synthesize name;
-//@synthesize latit;
-//@synthesize longi;
 @synthesize mapInfo;
 
 
