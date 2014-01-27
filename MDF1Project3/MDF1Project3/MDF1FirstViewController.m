@@ -99,11 +99,8 @@
         ApplicationState *theAppState = [ApplicationState sharedApplicationState];
         
         CustomObject *mapInfo = [theAppState.businessArray objectAtIndex:indexPath.row];
-        
-        
-        //individualMapView.name = [theAppState.businessArray objectAtIndex:indexPath.row]; //Show the name on the detail page
-        //individualMapView.latit = [theAppState.businessArray objectAtIndex:indexPath.row]; //Show the latitude on the detail page
-        //individualMapView.longi = [theAppState.businessArray objectAtIndex:indexPath.row]; //Show the longitude on the detail page
+        individualMapView.mapInfo = mapInfo;
+
         [self presentViewController:individualMapView animated:YES completion:nil];
         //[individualMapView updateUILabel];//Not sure if i need this becuase im not updating a UILabel but i need to update the map
     }   //Issue on the line above

@@ -15,8 +15,8 @@
     IBOutlet MKMapView *mapView;
     IBOutlet UIButton *backButton;
     IBOutlet UILabel *nameLabel;
-    IBOutlet UILabel *LatitudeLabel;
-    IBOutlet UILabel *LongitudeLabel;
+    IBOutlet UILabel *latitudeLabel;
+    IBOutlet UILabel *longitudeLabel;
 }
 
 @property (nonatomic) CustomObject *mapInfo;

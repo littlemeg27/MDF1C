@@ -37,8 +37,8 @@
     span.longitudeDelta = .5;
     
     CLLocationCoordinate2D location; //The location of the map
-    location.latitude = 35.227087;
-    location.longitude = -80.843127;
+    location.latitude = mapInfo.latitudeOfBusiness;
+    location.longitude = mapInfo.longitudeOfBusiness; //centering the pin depending on the location
     
     MKCoordinateRegion region;
     region.center = location;
@@ -55,6 +55,18 @@
     
     MyMapAnnotation *anno = [[MyMapAnnotation alloc]initWithTitle:mapInfo.nameOfBusiness coord:CLLocationCoordinate2DMake(mapInfo.latitudeOfBusiness, mapInfo.longitudeOfBusiness)];
 
+    NSString *name = mapInfo.nameOfBusiness;
+    NSLog(@"name %@", name);
+    
+    NSString *lat = [NSString stringWithFormat:@"%f", mapInfo.latitudeOfBusiness];//Convert float to string
+    NSLog(@"lat %@", lat);
+    
+    NSString *longi = [NSString stringWithFormat:@"%f", mapInfo.longitudeOfBusiness]; //Convert float to string
+    NSLog(@"long %@", longi);
+    
+    nameLabel.text = name;
+    latitudeLabel.text = lat;
+    longitudeLabel.text = longi; //Put these into the text labels
     
     if(theAppState != nil)
     {

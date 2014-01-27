@@ -55,12 +55,10 @@
 						<string key="NSFrame">{{0, 106}, {768, 898}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MCAwIDAgMAA</bytes>
-							<string key="IBUIColorCocoaTouchKeyPath">groupTableViewBackgroundColor</string>
+							<bytes key="NSRGB">MC4xNzU4MTc5NzM5IDAuNDMxMTYxNzAwNiAwLjczNjk0Mzc4NAA</bytes>
 						</object>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -118,8 +116,8 @@
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="912991569"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">3</int>
-					<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
+					<int key="NSColorSpace">1</int>
+					<bytes key="NSRGB">MC4xNzU4MTc5NzM5IDAuNDMxMTYxNzAwNiAwLjczNjk0Mzc4NAA</bytes>
 				</object>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics">
 					<int key="IBUIStatusBarStyle">2</int>
