@@ -11,6 +11,7 @@
 @interface ThirdViewController : UIViewController
 {
     NSMutableArray *customArray;
+    IBOutlet UILabel *customObjectLabel;
 }
 
 @end

@@ -34,6 +34,15 @@
     CustomObject *info5 = [[CustomObject alloc] initWithName:@"Test5" obj2:@"Test5"];
                            
     customArray = [[NSMutableArray alloc] initWithObjects:info1, info2, info3, info4, info5, nil];
+    
+    
+    for (int i = 0; i <= 4; i++)
+    {
+     customObjectLabel.text = [NSString stringWithFormat:@"%@", customArray];
+     NSLog(@"%@", customArray);
+
+    }
+    
                            
     [super viewDidLoad];
 	// Do any additional setup after loading the view.

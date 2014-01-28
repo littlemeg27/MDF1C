@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MDF1SecondViewController : UIViewController
+@interface MDF1SecondViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     IBOutlet UITableView *tableView;
     
@@ -19,4 +19,5 @@
     
     IBOutlet UIButton *editButton;
 }
+
 @end

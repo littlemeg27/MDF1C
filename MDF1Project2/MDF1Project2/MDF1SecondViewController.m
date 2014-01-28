@@ -19,32 +19,22 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Table View", @"Table View");
+        self.title = NSLocalizedString(@"TableView", @"TableView");
         self.tabBarItem.image = [UIImage imageNamed:@"second"];
     }
     return self;
 }
-							
+
 - (void)viewDidLoad
 {
-    array1 = [[NSMutableArray alloc] initWithObjects:
-              @"Untangling the Circuit Splits Regarding Cell Tower Siting Policy and 47 U.S.C. § 332(c)(7) When Is a Denial of One Effectively a Prohibition on All?",
-              @"Examination of cell phone usage habits and purposes of education faculty students.",
-              @"Perceptions of HIV infected patients on the use of cell phone as a tool to support their antiretroviral adherence; a cross-sectional study in a large referral hospital in Kenya.",
-              @"CELL PHONES, POLICE RECORDING, AND THE INTERSECTION OF THE FIRST AND FOURTH AMENDMENTS.",
-              @"AN INVESTIGATION OF THE RELATIONSHIP BETWEEN HIGH-SCHOOL STUDENTS' PROBLEMATIC MOBILE PHONE USE AND THEIR SELF-ESTEEM LEVELS.",
-              @"Ambulatory cell phone injuries in the United States: An emerging national concern.", nil]; //First array for tableView
+    array1 = [[NSMutableArray alloc] initWithObjects:@"Untangling the Circuit Splits Regarding Cell Tower Siting Policy and 47 U.S.C. § 332(c)(7) When Is a Denial of One Effectively a Prohibition on All?", @"Examination of cell phone usage habits and purposes of education faculty students.", @"Perceptions of HIV infected patients on the use of cell phone as a tool to support their antiretroviral adherence; a cross-sectional study in a large referral hospital in Kenya.", @"CELL PHONES, POLICE RECORDING, AND THE INTERSECTION OF THE FIRST AND FOURTH AMENDMENTS.", @"AN INVESTIGATION OF THE RELATIONSHIP BETWEEN HIGH-SCHOOL STUDENTS' PROBLEMATIC MOBILE PHONE USE AND THEIR SELF-ESTEEM LEVELS.", @"Ambulatory cell phone injuries in the United States: An emerging national concern.", nil]; //First array for tableView
     
-    array2 = [[NSMutableArray alloc] initWithObjects:
-              @"http://web.ebscohost.com.oclc.fullsail.edu:81/ehost/detail?vid=4&sid=282bf86e-373e-4f0e-b70f-8cc3ef327813%40sessionmgr114&hid=126&bdata=JnNpdGU9ZWhvc3QtbGl2ZQ%3d%3d#db=a9h&AN=91959719",
-              @"http://web.ebscohost.com.oclc.fullsail.edu:81/ehost/detail?vid=4&sid=282bf86e-373e-4f0e-b70f-8cc3ef327813%40sessionmgr114&hid=126&bdata=JnNpdGU9ZWhvc3QtbGl2ZQ%3d%3d#db=a9h&AN=90595980",
-              @"http://web.ebscohost.com.oclc.fullsail.edu:81/ehost/detail?vid=4&sid=282bf86e-373e-4f0e-b70f-8cc3ef327813%40sessionmgr114&hid=126&bdata=JnNpdGU9ZWhvc3QtbGl2ZQ%3d%3d#db=a9h&AN=91857115",
-              @"http://web.ebscohost.com.oclc.fullsail.edu:81/ehost/detail?vid=4&sid=282bf86e-373e-4f0e-b70f-8cc3ef327813%40sessionmgr114&hid=126&bdata=JnNpdGU9ZWhvc3QtbGl2ZQ%3d%3d#db=a9h&AN=92883842",
-              @"http://web.ebscohost.com.oclc.fullsail.edu:81/ehost/detail?vid=4&sid=282bf86e-373e-4f0e-b70f-8cc3ef327813%40sessionmgr114&hid=126&bdata=JnNpdGU9ZWhvc3QtbGl2ZQ%3d%3d#db=a9h&AN=90503194",
-              @"http://web.ebscohost.com.oclc.fullsail.edu:81/ehost/detail?vid=4&sid=282bf86e-373e-4f0e-b70f-8cc3ef327813%40sessionmgr114&hid=126&bdata=JnNpdGU9ZWhvc3QtbGl2ZQ%3d%3d#db=a9h&AN=91975034", nil]; //Second array for tableView
+    
+    
+    array2 = [[NSMutableArray alloc] initWithObjects:@"http://web.ebscohost.com.oclc.fullsail.edu:81/ehost/detail?vid=4&sid=282bf86e-373e-4f0e-b70f-8cc3ef327813%40sessionmgr114&hid=126&bdata=JnNpdGU9ZWhvc3QtbGl2ZQ%3d%3d#db=a9h&AN=91959719", @"http://web.ebscohost.com.oclc.fullsail.edu:81/ehost/detail?vid=4&sid=282bf86e-373e-4f0e-b70f-8cc3ef327813%40sessionmgr114&hid=126&bdata=JnNpdGU9ZWhvc3QtbGl2ZQ%3d%3d#db=a9h&AN=90595980", @"http://web.ebscohost.com.oclc.fullsail.edu:81/ehost/detail?vid=4&sid=282bf86e-373e-4f0e-b70f-8cc3ef327813%40sessionmgr114&hid=126&bdata=JnNpdGU9ZWhvc3QtbGl2ZQ%3d%3d#db=a9h&AN=91857115", @"http://web.ebscohost.com.oclc.fullsail.edu:81/ehost/detail?vid=4&sid=282bf86e-373e-4f0e-b70f-8cc3ef327813%40sessionmgr114&hid=126&bdata=JnNpdGU9ZWhvc3QtbGl2ZQ%3d%3d#db=a9h&AN=92883842", @"http://web.ebscohost.com.oclc.fullsail.edu:81/ehost/detail?vid=4&sid=282bf86e-373e-4f0e-b70f-8cc3ef327813%40sessionmgr114&hid=126&bdata=JnNpdGU9ZWhvc3QtbGl2ZQ%3d%3d#db=a9h&AN=90503194", @"http://web.ebscohost.com.oclc.fullsail.edu:81/ehost/detail?vid=4&sid=282bf86e-373e-4f0e-b70f-8cc3ef327813%40sessionmgr114&hid=126&bdata=JnNpdGU9ZWhvc3QtbGl2ZQ%3d%3d#db=a9h&AN=91975034", nil]; //Second array for tableView
     
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // Do any additional setup after loading the view.
 }
 
 - (void)viewDidAppear:(BOOL)animated
