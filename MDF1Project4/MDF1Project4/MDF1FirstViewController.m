@@ -27,7 +27,7 @@
 
 - (void)viewDidLoad
 {
-    //messages = 0; //Setting messages to zero
+    cityName = 0; //Setting messages to zero
     
     xmlURL = [[NSURL alloc]initWithString:@"http://i.wxbug.net/REST/SP/getLocationsXML.aspx?api_key=nkzvwtrrrqtnqec8tm4vqeju&SearchString=winterpark"]; //We are creating the URL
                                                                             //I wanted a better weather API, but this is the only link that i could get to work
@@ -74,6 +74,15 @@
         
         NSLog(@"%@", requestTheString); //Testing to see if the xml gets requested correctly
     }
+    //Starting the parsing
+    NSXMLParser *xmlParse = [[NSXMLParser alloc] initWithData:requestTheData]; //We are starting to parse the data we just collected
+    
+    if(xmlParse != nil)
+    {
+        [xmlParse setDelegate:self];
+        [xmlParse parse];
+    }
+
 }
 
 -(NSData*)GetFileDataFromFile:(NSString*)filename
@@ -93,27 +102,17 @@
         return [NSData dataWithContentsOfFile:theFilePath]; //returns back the NSData for the file
     }
     return nil;
-    
-    //Starting the parsing
-    NSXMLParser *xmlParse = [[NSXMLParser alloc] initWithData:requestTheData]; //We are starting to parse the data we just collected
-    
-    if(xmlParse != nil)
-    {
-        [xmlParse setDelegate:self];
-        [xmlParse parse];
-    }
-
 }
 
 -(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict //Grabs the xml
 {
-    if([elementName isEqualToString:@"aws:locations"]) //Parsing the weather list tag
+    if([elementName isEqualToString:@"aws:location"]) //Parsing the weather list tag
     {
-        NSString *nameString = [attributeDict valueForKey:@"name"];
+        NSString *cityNameString = [attributeDict valueForKey:@"cityname"];
         
-        if(nameString !=nil)
+        if(cityNameString !=nil)
         {
-           // messages = [nameString intValue];
+            cityName = [cityNameString intValue];
         }
     }
 }

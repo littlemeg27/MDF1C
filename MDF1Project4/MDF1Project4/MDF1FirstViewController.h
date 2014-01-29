@@ -17,7 +17,8 @@
     NSURL *xmlURL;
     NSURLConnection *connection;
     NSMutableData *requestTheData;
-    NSInteger *messages;
+    
+    NSInteger *cityName;
 }
 
 @end

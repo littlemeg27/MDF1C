@@ -31,6 +31,7 @@
 		BAACE9B218975BE40099536E /* MDF1Project4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACE9B118975BE40099536E /* MDF1Project4Tests.m */; };
 		BAACE9BE18976B920099536E /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAACE9BD18976B920099536E /* DetailView.xib */; };
 		BAACE9C118976BA40099536E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACE9C018976BA40099536E /* DetailViewController.m */; };
+		BAACE9F6189999510099536E /* WeatherItems.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACE9F5189999510099536E /* WeatherItems.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		BAACE9BD18976B920099536E /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 		BAACE9BF18976BA40099536E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		BAACE9C018976BA40099536E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		BAACE9F4189999510099536E /* WeatherItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherItems.h; sourceTree = "<group>"; };
+		BAACE9F5189999510099536E /* WeatherItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherItems.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,8 @@
 				BAACE9BF18976BA40099536E /* DetailViewController.h */,
 				BAACE9C018976BA40099536E /* DetailViewController.m */,
 				BAACE9BD18976B920099536E /* DetailView.xib */,
+				BAACE9F4189999510099536E /* WeatherItems.h */,
+				BAACE9F5189999510099536E /* WeatherItems.m */,
 			);
 			path = MDF1Project4;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				BAACE98618975BE30099536E /* MDF1FirstViewController.m in Sources */,
 				BAACE98D18975BE30099536E /* MDF1SecondViewController.m in Sources */,
 				BAACE9C118976BA40099536E /* DetailViewController.m in Sources */,
+				BAACE9F6189999510099536E /* WeatherItems.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +506,7 @@
 				BAACE9B718975BE40099536E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAACE9B818975BE40099536E /* Build configuration list for PBXNativeTarget "MDF1Project4Tests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +515,7 @@
 				BAACE9BA18975BE40099536E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
