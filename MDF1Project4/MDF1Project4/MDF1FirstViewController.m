@@ -7,7 +7,7 @@
 //
 
 #import "MDF1FirstViewController.h"
-#import "DetailView.h"
+#import "DetailViewController.h"
 
 @interface MDF1FirstViewController ()
 
@@ -27,10 +27,10 @@
 
 - (void)viewDidLoad
 {
-    messages = 0; //Setting messages to zero
+    //messages = 0; //Setting messages to zero
     
-    xmlURL = [[NSURL alloc]initWithString:@"http://feeds.adobe.com/webservices/mxna2.cfc?wsdl"]; //We are creating the URL
-    
+    xmlURL = [[NSURL alloc]initWithString:@"http://i.wxbug.net/REST/SP/getLocationsXML.aspx?api_key=nkzvwtrrrqtnqec8tm4vqeju&SearchString=winterpark"]; //We are creating the URL
+                                                                            //I wanted a better weather API, but this is the only link that i could get to work
     requestTheXML = [[NSURLRequest alloc] initWithURL:xmlURL]; //
     
     if(requestTheXML != nil)
@@ -39,6 +39,8 @@
         
         requestTheData = [NSMutableData data]; //This holds the data
     }
+    
+    NSData *theXMLData = [self GetFileDataFromFile:@""]; //Cant put a file in here, it will not create one
     
     NSXMLParser *xmlParse = [[NSXMLParser alloc] initWithData:requestTheData]; //We are starting to parse the data we just collected
     
@@ -66,13 +68,45 @@
     
     if(requestTheString != nil)
     {
+        NSArray *pathOfDoc = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES); //Creating the path for the document
+        NSString *documentDirectory = [pathOfDoc objectAtIndex:0];
+        
+            if(documentDirectory !=nil)
+            {
+                NSString *fullPathOfDocument = [[NSString alloc] initWithFormat:@"%@/%@", documentDirectory, @"index.html"]; //Grabbing the doc directory
+                
+                if (fullPathOfDocument !=nil)
+                {
+                    [requestTheData writeToFile:fullPathOfDocument atomically:TRUE];
+                }
+            }
+        
         NSLog(@"%@", requestTheString); //Testing to see if the xml gets requested correctly
     }
 }
 
--(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
+-(NSData*)GetFileDataFromFile:(NSString*)filename
 {
-    if([elementName isEqualToString:@"wsdl:message"]) //Parsing the food list tag
+    NSString *theFilePath = nil;
+    
+    NSFileManager *getFileManager = [NSFileManager defaultManager]; //Create the file manager
+    
+    NSArray *thePath = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES); //Get the path to the document directory
+    
+    NSString *theDocumentDirectory = [thePath objectAtIndex: 0];
+    
+    theFilePath = [theDocumentDirectory stringByAppendingPathComponent:filename]; //Create the the fullpath to the data file
+    
+    if ([getFileManager fileExistsAtPath:theFilePath]) //Does it exist?
+    {
+        return [NSData dataWithContentsOfFile:theFilePath]; //returns back the NSData for the file
+    }
+    return nil;
+}
+
+/*-(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict //Grabs the xml 
+{
+    if([elementName isEqualToString:@"aws:locations"]) //Parsing the weather list tag
     {
         NSString *nameString = [attributeDict valueForKey:@"name"];
         
@@ -81,7 +115,7 @@
             messages = [nameString intValue];
         }
     }
-}
+}*/
 
 - (void)didReceiveMemoryWarning
 {
