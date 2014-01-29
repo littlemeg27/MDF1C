@@ -40,16 +40,7 @@
         requestTheData = [NSMutableData data]; //This holds the data
     }
     
-    NSData *theXMLData = [self GetFileDataFromFile:@""]; //Cant put a file in here, it will not create one
-    
-    NSXMLParser *xmlParse = [[NSXMLParser alloc] initWithData:requestTheData]; //We are starting to parse the data we just collected
-    
-    if(xmlParse != nil)
-    {
-        [xmlParse setDelegate:self];
-        [xmlParse parse];
-    }
-    
+       
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -102,9 +93,19 @@
         return [NSData dataWithContentsOfFile:theFilePath]; //returns back the NSData for the file
     }
     return nil;
+    
+    //Starting the parsing
+    NSXMLParser *xmlParse = [[NSXMLParser alloc] initWithData:requestTheData]; //We are starting to parse the data we just collected
+    
+    if(xmlParse != nil)
+    {
+        [xmlParse setDelegate:self];
+        [xmlParse parse];
+    }
+
 }
 
-/*-(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict //Grabs the xml 
+-(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict //Grabs the xml
 {
     if([elementName isEqualToString:@"aws:locations"]) //Parsing the weather list tag
     {
@@ -112,10 +113,10 @@
         
         if(nameString !=nil)
         {
-            messages = [nameString intValue];
+           // messages = [nameString intValue];
         }
     }
-}*/
+}
 
 - (void)didReceiveMemoryWarning
 {
