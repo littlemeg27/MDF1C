@@ -9,13 +9,13 @@
 #import "MDF1FirstViewController.h"
 #import "DetailViewController.h"
 #import "WeatherItems.h"
-#import "DetailViewController.h"
 
 @interface MDF1FirstViewController ()
 
 @end
 
 @implementation MDF1FirstViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +29,8 @@
 
 - (void)viewDidLoad
 {
+    weather = [[NSMutableArray alloc] init];
+    
     xmlItem = 0; //Setting messages to zero
     
     xmlURL = [[NSURL alloc]initWithString:@"http://i.wxbug.net/REST/SP/getLocationsXML.aspx?api_key=nkzvwtrrrqtnqec8tm4vqeju&SearchString=winterpark"]; //We are creating the URL
@@ -74,7 +76,7 @@
                 }
             }
         
-        NSLog(@"%@", requestTheString); //Testing to see if the xml gets requested correctly
+        //NSLog(@"%@", requestTheString); //Testing to see if the xml gets requested correctly
     }
     //Starting the parsing
     NSXMLParser *xmlParse = [[NSXMLParser alloc] initWithData:requestTheData]; //We are starting to parse the data we just collected
@@ -84,6 +86,8 @@
         [xmlParse setDelegate:self];
         [xmlParse parse];
     }
+    //reload tableview with parsed data
+    [myTableView reloadData];
 
 }
 
@@ -110,18 +114,22 @@
 {
     if([elementName isEqualToString:@"aws:location"]) //Parsing the weather list tag
     {
-        NSString *cityName = [attributeDict valueForKey:@"cityname"];
-        NSString *stateName = [attributeDict valueForKey:@"statename"];
-        NSString *countryName = [attributeDict valueForKey:@"countryname"];
-        NSString *zipCode = [attributeDict valueForKey:@"zipcode"];
-        NSString *cityCode = [attributeDict valueForKey:@"citycode"];
-        NSString *cityType = [attributeDict valueForKey:@"citytype"];
+        cityName = [attributeDict valueForKey:@"cityname"];
+        stateName = [attributeDict valueForKey:@"statename"];
+        countryName = [attributeDict valueForKey:@"countryname"];
+        zipCode = [attributeDict valueForKey:@"zipcode"];
+        cityCode = [attributeDict valueForKey:@"citycode"];
+        cityType = [attributeDict valueForKey:@"citytype"];
+        
+        NSLog(@"City: %@, State: %@, Country: %@, Zip Code: %@, City Code: %@, City Type: %@", cityName, stateName, countryName, zipCode, cityCode, cityType);
         
         WeatherItems *item = [[WeatherItems alloc] initWithName:cityName state:stateName country:countryName zip:zipCode code:cityCode type:cityType];
+        NSLog(@"Weather Item: %@", item);
         
         if(item !=nil)
         {
             [weather addObject:item];
+            NSLog(@"Weather Array: %@", weather);
         }
     }
 }
@@ -157,19 +165,21 @@
     return [weather count];
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath //Adds values to each row
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath //Adds values to each row
 {
     static NSString  *cellIdentity = @"Cell";
     
-    UITableViewCell *cellRow  = [tableView dequeueReusableCellWithIdentifier: cellIdentity];
-    
+    UITableViewCell *cellRow  = [myTableView dequeueReusableCellWithIdentifier: cellIdentity];
     
     if(cellRow == nil)
     {
         cellRow = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: cellIdentity];
     }
     
-    cellRow.textLabel.text = [weather objectAtIndex:indexPath.row]; //Show the name on the table
+    WeatherItems *currentWeather = [weather objectAtIndex:indexPath.row]; //Show the name on the table
+    
+    //add text label
+    cellRow.textLabel.text = currentWeather.cityName;
     
     return cellRow;
 }
@@ -181,12 +191,14 @@
  
      if(detailView !=nil)
      {
-         detailView.city = [weather objectAtIndex:indexPath.row]; //Show the city on the detail page
-         detailView.state = [weather objectAtIndex:indexPath.row]; //Show the state on the detail page
-         detailView.country = [weather objectAtIndex:indexPath.row]; //Show the country on the detail page
-         detailView.zip = [weather objectAtIndex:indexPath.row]; //Show the zip on the detail page
-         detailView.code = [weather objectAtIndex:indexPath.row]; //Show the code on the detail page
-         detailView.type = [weather objectAtIndex:indexPath.row]; //Show the type on the detail page
+         WeatherItems *currentWeather = [weather objectAtIndex:indexPath.row];
+         
+         detailView.city = currentWeather.cityName; //Show the city on the detail page
+         detailView.state = currentWeather.stateName; //Show the state on the detail page
+         detailView.country = currentWeather.countryName; //Show the country on the detail page
+         detailView.zip = currentWeather.zipCode; //Show the zip on the detail page
+         detailView.code = currentWeather.cityCode; //Show the code on the detail page
+         detailView.type = currentWeather.cityType; //Show the type on the detail page
          [self presentViewController:detailView animated:YES completion:nil];
          [detailView updateUILabel];
      }
@@ -196,13 +208,13 @@
 {
     if(editMode == FALSE) //Ask what type of editing mode
     {
-        [tableView setEditing:TRUE];
+        [myTableView setEditing:TRUE];
         [editButton setTitle:@"Finish" forState: UIControlStateNormal];
         editMode = TRUE; //Reset to not be in editing mode
     }
     else
     {
-        [tableView setEditing:FALSE];
+        [myTableView setEditing:FALSE];
         [editButton setTitle:@"Edit" forState:UIControlStateNormal];
         editMode = FALSE;
     }

@@ -20,4 +20,11 @@
 
 -(id)initWithName:(NSString*)city state:(NSString*)state country:(NSString*)country zip:(NSString*)zip code:(NSString*)code type:(NSString*)type;
 
+@property (nonatomic, strong)NSString *cityName;
+@property (nonatomic, strong)NSString *stateName;
+@property (nonatomic, strong)NSString *countryName;
+@property (nonatomic, strong)NSString *zipCode;
+@property (nonatomic, strong)NSString *cityCode;
+@property (nonatomic, strong)NSString *cityType;
+
 @end
