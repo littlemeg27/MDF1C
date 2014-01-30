@@ -14,6 +14,13 @@
 
 @implementation DetailViewController
 
+@synthesize city;
+@synthesize state;
+@synthesize country;
+@synthesize zip;
+@synthesize code;
+@synthesize type;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -34,5 +41,21 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)updateUILabel
+{
+    cityLabel.text = city;
+    stateLabel.text = state;
+    countryLabel.text = country;
+    zipLabel.text = zip;
+    codeLabel.text = code;
+    typeLabel.text = type;
+}
+
+-(IBAction)backButton:(id)sender
+{
+    [self dismissViewControllerAnimated:TRUE completion:nil];
+}
+
 
 @end

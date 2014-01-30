@@ -146,8 +146,7 @@
         NSLog(@"I want to delete: %d", indexPath.row);
         
         [weather removeObjectAtIndex:indexPath.row];
-        
-        
+    
         [tableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:TRUE];
     }
 }
@@ -182,11 +181,12 @@
  
      if(detailView !=nil)
      {
-         detailView.name = [weather objectAtIndex:indexPath.row]; //Show the name on the detail page
-         detailView.linkName = [weather objectAtIndex:indexPath.row]; //Show the team on the detail page
-         detailView.linkName = [weather objectAtIndex:indexPath.row]; //Show the team on the detail page
-         detailView.linkName = [weather objectAtIndex:indexPath.row]; //Show the team on the detail page
-         detailView.linkName = [weather objectAtIndex:indexPath.row]; //Show the team on the detail page
+         detailView.city = [weather objectAtIndex:indexPath.row]; //Show the city on the detail page
+         detailView.state = [weather objectAtIndex:indexPath.row]; //Show the state on the detail page
+         detailView.country = [weather objectAtIndex:indexPath.row]; //Show the country on the detail page
+         detailView.zip = [weather objectAtIndex:indexPath.row]; //Show the zip on the detail page
+         detailView.code = [weather objectAtIndex:indexPath.row]; //Show the code on the detail page
+         detailView.type = [weather objectAtIndex:indexPath.row]; //Show the type on the detail page
          [self presentViewController:detailView animated:YES completion:nil];
          [detailView updateUILabel];
      }

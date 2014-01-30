@@ -10,14 +10,24 @@
 
 @interface DetailViewController : UIViewController
 {
-    IBOutlet UILabel* Label;
-    IBOutlet UILabel* stationLabel;
-    IBOutlet UILabel* numberOfYearsLabel;
+    IBOutlet UILabel* cityLabel;
+    IBOutlet UILabel* stateLabel;
+    IBOutlet UILabel* countryLabel;
+    IBOutlet UILabel* zipLabel;
+    IBOutlet UILabel* codeLabel;
+    IBOutlet UILabel* typeLabel;
+
     IBOutlet UIButton* backButton;
 }
 
-@property(nonatomic, copy) NSString* showName;
-@property(nonatomic, copy) NSString* station;
-@property(nonatomic, copy) NSString* years;
+@property(nonatomic, copy) NSString* city;
+@property(nonatomic, copy) NSString* state;
+@property(nonatomic, copy) NSString* country;
+@property(nonatomic, copy) NSString* zip;
+@property(nonatomic, copy) NSString* code;
+@property(nonatomic, copy) NSString* type;
+
+-(void)updateUILabel;
+-(IBAction)backButton:(id)sender;
 
 @end
