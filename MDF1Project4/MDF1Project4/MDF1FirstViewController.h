@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WeatherItems.h"
 
 @interface MDF1FirstViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSURLConnectionDataDelegate, NSXMLParserDelegate>
 {
     BOOL editMode;
     IBOutlet UIButton *editButton;
-    IBOutlet UITableView *myTableView;
+    IBOutlet UITableView *tableView;
+    
     NSURLRequest *requestTheXML;
     NSURL *xmlURL;
     NSURLConnection *connection;

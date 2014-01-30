@@ -9,7 +9,6 @@
 #import "WeatherItems.h"
 
 @implementation WeatherItems
-@synthesize cityName, stateName, countryName, zipCode, cityCode, cityType;
 
 
 -(id)initWithName:(NSString*)city state:(NSString*)state country:(NSString*)country zip:(NSString*)zip code:(NSString*)code type:(NSString*)type

@@ -34,7 +34,7 @@
     xmlItem = 0; //Setting messages to zero
     
     xmlURL = [[NSURL alloc]initWithString:@"http://i.wxbug.net/REST/SP/getLocationsXML.aspx?api_key=nkzvwtrrrqtnqec8tm4vqeju&SearchString=winterpark"]; //We are creating the URL
-                                                                            //I wanted a better weather API, but this is the only link that i could get to work
+    //I wanted a better weather API, but this is the only link that i could get to work
     requestTheXML = [[NSURLRequest alloc] initWithURL:xmlURL]; //
     
     if(requestTheXML != nil)
@@ -44,7 +44,7 @@
         requestTheData = [NSMutableData data]; //This holds the data
     }
     
-       
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -66,15 +66,15 @@
         NSArray *pathOfDoc = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES); //Creating the path for the document
         NSString *documentDirectory = [pathOfDoc objectAtIndex:0];
         
-            if(documentDirectory !=nil)
+        if(documentDirectory !=nil)
+        {
+            NSString *fullPathOfDocument = [[NSString alloc] initWithFormat:@"%@/%@", documentDirectory, @"index.html"]; //Grabbing the doc directory
+            
+            if (fullPathOfDocument !=nil)
             {
-                NSString *fullPathOfDocument = [[NSString alloc] initWithFormat:@"%@/%@", documentDirectory, @"index.html"]; //Grabbing the doc directory
-                
-                if (fullPathOfDocument !=nil)
-                {
-                    [requestTheData writeToFile:fullPathOfDocument atomically:TRUE];
-                }
+                [requestTheData writeToFile:fullPathOfDocument atomically:TRUE];
             }
+        }
         
         //NSLog(@"%@", requestTheString); //Testing to see if the xml gets requested correctly
     }
@@ -87,8 +87,8 @@
         [xmlParse parse];
     }
     //reload tableview with parsed data
-    [myTableView reloadData];
-
+    [tableView reloadData];
+    
 }
 
 -(NSData*)GetFileDataFromFile:(NSString*)filename
@@ -154,7 +154,7 @@
         NSLog(@"I want to delete: %d", indexPath.row);
         
         [weather removeObjectAtIndex:indexPath.row];
-    
+        
         [tableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:TRUE];
     }
 }
@@ -169,7 +169,7 @@
 {
     static NSString  *cellIdentity = @"Cell";
     
-    UITableViewCell *cellRow  = [myTableView dequeueReusableCellWithIdentifier: cellIdentity];
+    UITableViewCell *cellRow  = [tableView dequeueReusableCellWithIdentifier: cellIdentity];
     
     if(cellRow == nil)
     {
@@ -188,33 +188,33 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     DetailViewController *detailView = [[DetailViewController alloc] initWithNibName:@"DetailView" bundle:nil]; //Pop to the detail page
- 
-     if(detailView !=nil)
-     {
-         WeatherItems *currentWeather = [weather objectAtIndex:indexPath.row];
-         
-         detailView.city = currentWeather.cityName; //Show the city on the detail page
-         detailView.state = currentWeather.stateName; //Show the state on the detail page
-         detailView.country = currentWeather.countryName; //Show the country on the detail page
-         detailView.zip = currentWeather.zipCode; //Show the zip on the detail page
-         detailView.code = currentWeather.cityCode; //Show the code on the detail page
-         detailView.type = currentWeather.cityType; //Show the type on the detail page
-         [self presentViewController:detailView animated:YES completion:nil];
-         [detailView updateUILabel];
-     }
+    
+    if(detailView !=nil)
+    {
+        WeatherItems *currentWeather = [weather objectAtIndex:indexPath.row];
+        
+        detailView.city = currentWeather.cityName; //Show the city on the detail page
+        detailView.state = currentWeather.stateName; //Show the state on the detail page
+        detailView.country = currentWeather.countryName; //Show the country on the detail page
+        detailView.zip = currentWeather.zipCode; //Show the zip on the detail page
+        detailView.code = currentWeather.cityCode; //Show the code on the detail page
+        detailView.type = currentWeather.cityType; //Show the type on the detail page
+        [self presentViewController:detailView animated:YES completion:nil];
+        [detailView updateUILabel];
+    }
 }
 
 -(IBAction)editButton:(id)sender
 {
     if(editMode == FALSE) //Ask what type of editing mode
     {
-        [myTableView setEditing:TRUE];
+        [tableView setEditing:TRUE];
         [editButton setTitle:@"Finish" forState: UIControlStateNormal];
         editMode = TRUE; //Reset to not be in editing mode
     }
     else
     {
-        [myTableView setEditing:FALSE];
+        [tableView setEditing:FALSE];
         [editButton setTitle:@"Edit" forState:UIControlStateNormal];
         editMode = FALSE;
     }
