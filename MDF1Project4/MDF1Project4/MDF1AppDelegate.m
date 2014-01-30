@@ -21,6 +21,7 @@
     UIViewController *viewController1, *viewController2;
 
         viewController1 = [[MDF1FirstViewController alloc] initWithNibName:@"MDF1FirstViewController_iPad" bundle:nil];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController: viewController1]; //This is the nav controller
         viewController2 = [[MDF1SecondViewController alloc] initWithNibName:@"MDF1SecondViewController_iPad" bundle:nil];
 
     self.tabBarController = [[UITabBarController alloc] init];

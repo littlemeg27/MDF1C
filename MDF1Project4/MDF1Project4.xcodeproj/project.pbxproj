@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA25AB18189AD49900339869 /* MDF1SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA25AB17189AD49900339869 /* MDF1SecondViewController_iPad.xib */; };
+		BA25AB1A189AD4D700339869 /* MDF1FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA25AB19189AD4D700339869 /* MDF1FirstViewController_iPad.xib */; };
+		BA25AB1C189AD51300339869 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA25AB1B189AD51300339869 /* DetailView.xib */; };
 		BAACE96D18975BE30099536E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAACE96C18975BE30099536E /* UIKit.framework */; };
 		BAACE96F18975BE30099536E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAACE96E18975BE30099536E /* Foundation.framework */; };
 		BAACE97118975BE30099536E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAACE97018975BE30099536E /* CoreGraphics.framework */; };
@@ -22,14 +25,11 @@
 		BAACE98D18975BE30099536E /* MDF1SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACE98C18975BE30099536E /* MDF1SecondViewController.m */; };
 		BAACE98F18975BE30099536E /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = BAACE98E18975BE30099536E /* second.png */; };
 		BAACE99118975BE30099536E /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAACE99018975BE30099536E /* second@2x.png */; };
-		BAACE99718975BE30099536E /* MDF1FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAACE99518975BE30099536E /* MDF1FirstViewController_iPad.xib */; };
-		BAACE99D18975BE40099536E /* MDF1SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAACE99B18975BE40099536E /* MDF1SecondViewController_iPad.xib */; };
 		BAACE9A518975BE40099536E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAACE9A418975BE40099536E /* SenTestingKit.framework */; };
 		BAACE9A618975BE40099536E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAACE96C18975BE30099536E /* UIKit.framework */; };
 		BAACE9A718975BE40099536E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAACE96E18975BE30099536E /* Foundation.framework */; };
 		BAACE9AF18975BE40099536E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAACE9AD18975BE40099536E /* InfoPlist.strings */; };
 		BAACE9B218975BE40099536E /* MDF1Project4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACE9B118975BE40099536E /* MDF1Project4Tests.m */; };
-		BAACE9BE18976B920099536E /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAACE9BD18976B920099536E /* DetailView.xib */; };
 		BAACE9C118976BA40099536E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACE9C018976BA40099536E /* DetailViewController.m */; };
 		BAACE9F6189999510099536E /* WeatherItems.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACE9F5189999510099536E /* WeatherItems.m */; };
 /* End PBXBuildFile section */
@@ -45,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA25AB17189AD49900339869 /* MDF1SecondViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MDF1SecondViewController_iPad.xib; sourceTree = "<group>"; };
+		BA25AB19189AD4D700339869 /* MDF1FirstViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MDF1FirstViewController_iPad.xib; sourceTree = "<group>"; };
+		BA25AB1B189AD51300339869 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 		BAACE96918975BE30099536E /* MDF1Project4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDF1Project4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAACE96C18975BE30099536E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BAACE96E18975BE30099536E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -66,15 +69,12 @@
 		BAACE98C18975BE30099536E /* MDF1SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDF1SecondViewController.m; sourceTree = "<group>"; };
 		BAACE98E18975BE30099536E /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		BAACE99018975BE30099536E /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		BAACE99618975BE30099536E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MDF1FirstViewController_iPad.xib; sourceTree = "<group>"; };
-		BAACE99C18975BE40099536E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MDF1SecondViewController_iPad.xib; sourceTree = "<group>"; };
 		BAACE9A318975BE40099536E /* MDF1Project4Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MDF1Project4Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAACE9A418975BE40099536E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		BAACE9AC18975BE40099536E /* MDF1Project4Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MDF1Project4Tests-Info.plist"; sourceTree = "<group>"; };
 		BAACE9AE18975BE40099536E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BAACE9B018975BE40099536E /* MDF1Project4Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDF1Project4Tests.h; sourceTree = "<group>"; };
 		BAACE9B118975BE40099536E /* MDF1Project4Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDF1Project4Tests.m; sourceTree = "<group>"; };
-		BAACE9BD18976B920099536E /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 		BAACE9BF18976BA40099536E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		BAACE9C018976BA40099536E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		BAACE9F4189999510099536E /* WeatherItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherItems.h; sourceTree = "<group>"; };
@@ -140,18 +140,18 @@
 			children = (
 				BAACE97B18975BE30099536E /* MDF1AppDelegate.h */,
 				BAACE97C18975BE30099536E /* MDF1AppDelegate.m */,
-				BAACE99518975BE30099536E /* MDF1FirstViewController_iPad.xib */,
-				BAACE99B18975BE40099536E /* MDF1SecondViewController_iPad.xib */,
-				BAACE9BD18976B920099536E /* DetailView.xib */,
 				BAACE98418975BE30099536E /* MDF1FirstViewController.h */,
 				BAACE98518975BE30099536E /* MDF1FirstViewController.m */,
-				BAACE9BF18976BA40099536E /* DetailViewController.h */,
-				BAACE9C018976BA40099536E /* DetailViewController.m */,
+				BA25AB19189AD4D700339869 /* MDF1FirstViewController_iPad.xib */,
 				BAACE98B18975BE30099536E /* MDF1SecondViewController.h */,
 				BAACE98C18975BE30099536E /* MDF1SecondViewController.m */,
-				BAACE97318975BE30099536E /* Supporting Files */,
+				BA25AB17189AD49900339869 /* MDF1SecondViewController_iPad.xib */,
+				BAACE9BF18976BA40099536E /* DetailViewController.h */,
+				BAACE9C018976BA40099536E /* DetailViewController.m */,
+				BA25AB1B189AD51300339869 /* DetailView.xib */,
 				BAACE9F4189999510099536E /* WeatherItems.h */,
 				BAACE9F5189999510099536E /* WeatherItems.m */,
+				BAACE97318975BE30099536E /* Supporting Files */,
 				BAACE98718975BE30099536E /* first.png */,
 				BAACE98918975BE30099536E /* first@2x.png */,
 				BAACE98E18975BE30099536E /* second.png */,
@@ -273,9 +273,9 @@
 				BAACE98A18975BE30099536E /* first@2x.png in Resources */,
 				BAACE98F18975BE30099536E /* second.png in Resources */,
 				BAACE99118975BE30099536E /* second@2x.png in Resources */,
-				BAACE99718975BE30099536E /* MDF1FirstViewController_iPad.xib in Resources */,
-				BAACE99D18975BE40099536E /* MDF1SecondViewController_iPad.xib in Resources */,
-				BAACE9BE18976B920099536E /* DetailView.xib in Resources */,
+				BA25AB18189AD49900339869 /* MDF1SecondViewController_iPad.xib in Resources */,
+				BA25AB1A189AD4D700339869 /* MDF1FirstViewController_iPad.xib in Resources */,
+				BA25AB1C189AD51300339869 /* DetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,22 +344,6 @@
 				BAACE97618975BE30099536E /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		BAACE99518975BE30099536E /* MDF1FirstViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BAACE99618975BE30099536E /* en */,
-			);
-			name = MDF1FirstViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
-		BAACE99B18975BE40099536E /* MDF1SecondViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BAACE99C18975BE40099536E /* en */,
-			);
-			name = MDF1SecondViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 		BAACE9AD18975BE40099536E /* InfoPlist.strings */ = {
