@@ -18,7 +18,8 @@
     NSURLConnection *connection;
     NSMutableData *requestTheData;
     
-    NSInteger *cityName;
+    NSInteger *xmlItem;
+    NSMutableArray *weather;
 }
 
 @end

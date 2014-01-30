@@ -8,6 +8,8 @@
 
 #import "MDF1FirstViewController.h"
 #import "DetailViewController.h"
+#import "WeatherItems.h"
+#import "DetailViewController.h"
 
 @interface MDF1FirstViewController ()
 
@@ -19,7 +21,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"First", @"First");
+        self.title = NSLocalizedString(@"Table View", @"Table View");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
     return self;
@@ -27,7 +29,7 @@
 
 - (void)viewDidLoad
 {
-    cityName = 0; //Setting messages to zero
+    xmlItem = 0; //Setting messages to zero
     
     xmlURL = [[NSURL alloc]initWithString:@"http://i.wxbug.net/REST/SP/getLocationsXML.aspx?api_key=nkzvwtrrrqtnqec8tm4vqeju&SearchString=winterpark"]; //We are creating the URL
                                                                             //I wanted a better weather API, but this is the only link that i could get to work
@@ -108,11 +110,18 @@
 {
     if([elementName isEqualToString:@"aws:location"]) //Parsing the weather list tag
     {
-        NSString *cityNameString = [attributeDict valueForKey:@"cityname"];
+        NSString *cityName = [attributeDict valueForKey:@"cityname"];
+        NSString *stateName = [attributeDict valueForKey:@"statename"];
+        NSString *countryName = [attributeDict valueForKey:@"countryname"];
+        NSString *zipCode = [attributeDict valueForKey:@"zipcode"];
+        NSString *cityCode = [attributeDict valueForKey:@"citycode"];
+        NSString *cityType = [attributeDict valueForKey:@"citytype"];
         
-        if(cityNameString !=nil)
+        WeatherItems *item = [[WeatherItems alloc] initWithName:cityName state:stateName country:countryName zip:zipCode code:cityCode type:cityType];
+        
+        if(item !=nil)
         {
-            cityName = [cityNameString intValue];
+            [weather addObject:item];
         }
     }
 }
@@ -136,8 +145,8 @@
     {
         NSLog(@"I want to delete: %d", indexPath.row);
         
-        //[stringArray1 removeObjectAtIndex:indexPath.row];
-        //[stringArray2 removeObjectAtIndex:indexPath.row];
+        [weather removeObjectAtIndex:indexPath.row];
+        
         
         [tableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:TRUE];
     }
@@ -146,7 +155,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section //Creates table view
 {
-    //return [stringArray1 count];
+    return [weather count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath //Adds values to each row
@@ -161,24 +170,27 @@
         cellRow = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: cellIdentity];
     }
     
-    //cellRow.textLabel.text = [stringArray1 objectAtIndex:indexPath.row]; //Show the name on the table
+    cellRow.textLabel.text = [weather objectAtIndex:indexPath.row]; //Show the name on the table
     
     return cellRow;
 }
 
 
-/*- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
- {
- DetailView *detailView = [[DetailView alloc] initWithNibName:@"DetailView" bundle:nil]; //Pop to the detail page
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    DetailViewController *detailView = [[DetailViewController alloc] initWithNibName:@"DetailView" bundle:nil]; //Pop to the detail page
  
- if(detailView !=nil)
- {
- detailView.name = [stringArray1 objectAtIndex:indexPath.row]; //Show the name on the detail page
- detailView.linkName = [stringArray2 objectAtIndex:indexPath.row]; //Show the team on the detail page
- [self presentViewController:detailView animated:YES completion:nil];
- [detailView updateUILabel];
- }
- }*/
+     if(detailView !=nil)
+     {
+         detailView.name = [weather objectAtIndex:indexPath.row]; //Show the name on the detail page
+         detailView.linkName = [weather objectAtIndex:indexPath.row]; //Show the team on the detail page
+         detailView.linkName = [weather objectAtIndex:indexPath.row]; //Show the team on the detail page
+         detailView.linkName = [weather objectAtIndex:indexPath.row]; //Show the team on the detail page
+         detailView.linkName = [weather objectAtIndex:indexPath.row]; //Show the team on the detail page
+         [self presentViewController:detailView animated:YES completion:nil];
+         [detailView updateUILabel];
+     }
+}
 
 -(IBAction)editButton:(id)sender
 {

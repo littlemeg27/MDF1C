@@ -9,5 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController
+{
+    IBOutlet UILabel* Label;
+    IBOutlet UILabel* stationLabel;
+    IBOutlet UILabel* numberOfYearsLabel;
+    IBOutlet UIButton* backButton;
+}
+
+@property(nonatomic, copy) NSString* showName;
+@property(nonatomic, copy) NSString* station;
+@property(nonatomic, copy) NSString* years;
 
 @end
