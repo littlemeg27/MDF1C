@@ -2,7 +2,7 @@
 //  MDF1SecondViewController.m
 //  MDF1Project4
 //
-//  Created by Brenna Pavlinchak on 1/30/14.
+//  Created by Brenna Pavlinchak on 1/27/14.
 //  Copyright (c) 2014 Brenna Pavlinchak. All rights reserved.
 //
 
@@ -23,9 +23,18 @@
     }
     return self;
 }
-
+							
 - (void)viewDidLoad
 {
+    //grab data from singleton
+    xmlString = [DataManager sharedDataManager];
+    
+    //create a local string
+    NSMutableString *localXmlString = xmlString.weatherString;
+    
+    //load local string into UITextView
+    xmlDataText.text = localXmlString;
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

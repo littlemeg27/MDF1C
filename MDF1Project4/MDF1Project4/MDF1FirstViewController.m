@@ -2,13 +2,14 @@
 //  MDF1FirstViewController.m
 //  MDF1Project4
 //
-//  Created by Brenna Pavlinchak on 1/30/14.
+//  Created by Brenna Pavlinchak on 1/27/14.
 //  Copyright (c) 2014 Brenna Pavlinchak. All rights reserved.
 //
 
 #import "MDF1FirstViewController.h"
 #import "DetailViewController.h"
 #import "WeatherItems.h"
+#import "DataManager.h"
 
 @interface MDF1FirstViewController ()
 
@@ -20,8 +21,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self)
-    {
+    if (self) {
         self.title = NSLocalizedString(@"Table View", @"Table View");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
@@ -35,7 +35,7 @@
     xmlItem = 0; //Setting messages to zero
     
     xmlURL = [[NSURL alloc]initWithString:@"http://i.wxbug.net/REST/SP/getLocationsXML.aspx?api_key=nkzvwtrrrqtnqec8tm4vqeju&SearchString=winterpark"]; //We are creating the URL
-    //I wanted a better weather API, but this is the only link that i could get to work
+                                                                            //I wanted a better weather API, but this is the only link that i could get to work
     requestTheXML = [[NSURLRequest alloc] initWithURL:xmlURL]; //
     
     if(requestTheXML != nil)
@@ -45,9 +45,12 @@
         requestTheData = [NSMutableData data]; //This holds the data
     }
     
-    
+       
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    //load my xml data in a string
+    [DataManager sharedDataManager];
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
@@ -60,24 +63,37 @@
 
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
+    
+    //clear old string of xml data
+    weatherString = nil;
+    
     NSString *requestTheString = [[NSString alloc]initWithData:requestTheData encoding:NSASCIIStringEncoding]; //This is how we are outputting
+    DataManager *loadFile = [DataManager sharedDataManager];
+    if (loadFile != nil)
+    {
+        weatherString = loadFile.weatherString;
+        if (weatherString != nil)
+        {
+            [weatherString appendString:requestTheString];
+        }
+    }
     
     if(requestTheString != nil)
     {
         NSArray *pathOfDoc = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES); //Creating the path for the document
         NSString *documentDirectory = [pathOfDoc objectAtIndex:0];
         
-        if(documentDirectory !=nil)
-        {
-            NSString *fullPathOfDocument = [[NSString alloc] initWithFormat:@"%@/%@", documentDirectory, @"index.html"]; //Grabbing the doc directory
-            
-            if (fullPathOfDocument !=nil)
+            if(documentDirectory !=nil)
             {
-                [requestTheData writeToFile:fullPathOfDocument atomically:TRUE];
+                NSString *fullPathOfDocument = [[NSString alloc] initWithFormat:@"%@/%@", documentDirectory, @"index.html"]; //Grabbing the doc directory
+                
+                if (fullPathOfDocument !=nil)
+                {
+                    [requestTheData writeToFile:fullPathOfDocument atomically:TRUE];
+                }
             }
-        }
         
-        NSLog(@"%@", requestTheString); //Testing to see if the xml gets requested correctly
+        //NSLog(@"%@", requestTheString); //Testing to see if the xml gets requested correctly
     }
     //Starting the parsing
     NSXMLParser *xmlParse = [[NSXMLParser alloc] initWithData:requestTheData]; //We are starting to parse the data we just collected
@@ -89,7 +105,7 @@
     }
     //reload tableview with parsed data
     [myTableView reloadData];
-    
+
 }
 
 -(NSData*)GetFileDataFromFile:(NSString*)filename
@@ -155,8 +171,8 @@
         NSLog(@"I want to delete: %d", indexPath.row);
         
         [weather removeObjectAtIndex:indexPath.row];
-        
-        [myTableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:TRUE];
+    
+        [tableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:TRUE];
     }
 }
 
@@ -189,20 +205,20 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     DetailViewController *detailView = [[DetailViewController alloc] initWithNibName:@"DetailView" bundle:nil]; //Pop to the detail page
-    
-    if(detailView !=nil)
-    {
-        WeatherItems *currentWeather = [weather objectAtIndex:indexPath.row];
-        
-        detailView.city = currentWeather.cityName; //Show the city on the detail page
-        detailView.state = currentWeather.stateName; //Show the state on the detail page
-        detailView.country = currentWeather.countryName; //Show the country on the detail page
-        detailView.zip = currentWeather.zipCode; //Show the zip on the detail page
-        detailView.code = currentWeather.cityCode; //Show the code on the detail page
-        detailView.type = currentWeather.cityType; //Show the type on the detail page
-        [self presentViewController:detailView animated:YES completion:nil];
-        [detailView updateUILabel];
-    }
+ 
+     if(detailView !=nil)
+     {
+         WeatherItems *currentWeather = [weather objectAtIndex:indexPath.row];
+         
+         detailView.city = currentWeather.cityName; //Show the city on the detail page
+         detailView.state = currentWeather.stateName; //Show the state on the detail page
+         detailView.country = currentWeather.countryName; //Show the country on the detail page
+         detailView.zip = currentWeather.zipCode; //Show the zip on the detail page
+         detailView.code = currentWeather.cityCode; //Show the code on the detail page
+         detailView.type = currentWeather.cityType; //Show the type on the detail page
+         [self presentViewController:detailView animated:YES completion:nil];
+         [detailView updateUILabel];
+     }
 }
 
 -(IBAction)editButton:(id)sender
