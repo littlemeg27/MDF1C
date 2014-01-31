@@ -16,7 +16,7 @@
     IBOutlet UILabel* zipLabel;
     IBOutlet UILabel* codeLabel;
     IBOutlet UILabel* typeLabel;
-
+    
     IBOutlet UIButton* backButton;
 }
 

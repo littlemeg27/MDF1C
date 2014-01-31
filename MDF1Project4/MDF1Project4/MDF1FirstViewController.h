@@ -7,27 +7,28 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WeatherItems.h"
 
 @interface MDF1FirstViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSURLConnectionDataDelegate, NSXMLParserDelegate>
 {
     BOOL editMode;
     IBOutlet UIButton *editButton;
-    IBOutlet UITableView *tableView;
+    IBOutlet UITableView *tableView; //IB outlets
     
     NSURLRequest *requestTheXML;
     NSURL *xmlURL;
     NSURLConnection *connection;
-    NSMutableData *requestTheData;
+    NSMutableData *requestTheData; //Connection information
     
     NSMutableString *cityName;
     NSMutableString *stateName;
     NSMutableString *countryName;
     NSMutableString *zipCode;
     NSMutableString *cityCode;
-    NSMutableString *cityType;
+    NSMutableString *cityType; //NSMutable strings for the array and so we can display
     
     NSInteger *xmlItem;
-    NSMutableArray *weather;
+    NSMutableArray *weather; //NSMutableArray for parsing
 }
 
 @end

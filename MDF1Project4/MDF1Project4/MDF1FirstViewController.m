@@ -20,7 +20,8 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if (self)
+    {
         self.title = NSLocalizedString(@"Table View", @"Table View");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
@@ -34,7 +35,7 @@
     xmlItem = 0; //Setting messages to zero
     
     xmlURL = [[NSURL alloc]initWithString:@"http://i.wxbug.net/REST/SP/getLocationsXML.aspx?api_key=nkzvwtrrrqtnqec8tm4vqeju&SearchString=winterpark"]; //We are creating the URL
-    //I wanted a better weather API, but this is the only link that i could get to work
+                                                                                              //I wanted a better weather API, but this is the only link that i could get to work
     requestTheXML = [[NSURLRequest alloc] initWithURL:xmlURL]; //
     
     if(requestTheXML != nil)
