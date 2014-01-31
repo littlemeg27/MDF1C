@@ -7,188 +7,135 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BAACE96D18975BE30099536E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAACE96C18975BE30099536E /* UIKit.framework */; };
-		BAACE96F18975BE30099536E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAACE96E18975BE30099536E /* Foundation.framework */; };
-		BAACE97118975BE30099536E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAACE97018975BE30099536E /* CoreGraphics.framework */; };
-		BAACE97718975BE30099536E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAACE97518975BE30099536E /* InfoPlist.strings */; };
-		BAACE97918975BE30099536E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACE97818975BE30099536E /* main.m */; };
-		BAACE97D18975BE30099536E /* MDF1AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACE97C18975BE30099536E /* MDF1AppDelegate.m */; };
-		BAACE97F18975BE30099536E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BAACE97E18975BE30099536E /* Default.png */; };
-		BAACE98118975BE30099536E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAACE98018975BE30099536E /* Default@2x.png */; };
-		BAACE98318975BE30099536E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAACE98218975BE30099536E /* Default-568h@2x.png */; };
-		BAACE98618975BE30099536E /* MDF1FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACE98518975BE30099536E /* MDF1FirstViewController.m */; };
-		BAACE98818975BE30099536E /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = BAACE98718975BE30099536E /* first.png */; };
-		BAACE98A18975BE30099536E /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAACE98918975BE30099536E /* first@2x.png */; };
-		BAACE98D18975BE30099536E /* MDF1SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACE98C18975BE30099536E /* MDF1SecondViewController.m */; };
-		BAACE98F18975BE30099536E /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = BAACE98E18975BE30099536E /* second.png */; };
-		BAACE99118975BE30099536E /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAACE99018975BE30099536E /* second@2x.png */; };
-		BAACE99718975BE30099536E /* MDF1FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAACE99518975BE30099536E /* MDF1FirstViewController_iPad.xib */; };
-		BAACE99D18975BE40099536E /* MDF1SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAACE99B18975BE40099536E /* MDF1SecondViewController_iPad.xib */; };
-		BAACE9A518975BE40099536E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAACE9A418975BE40099536E /* SenTestingKit.framework */; };
-		BAACE9A618975BE40099536E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAACE96C18975BE30099536E /* UIKit.framework */; };
-		BAACE9A718975BE40099536E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAACE96E18975BE30099536E /* Foundation.framework */; };
-		BAACE9AF18975BE40099536E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAACE9AD18975BE40099536E /* InfoPlist.strings */; };
-		BAACE9B218975BE40099536E /* MDF1Project4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACE9B118975BE40099536E /* MDF1Project4Tests.m */; };
-		BAACE9BE18976B920099536E /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAACE9BD18976B920099536E /* DetailView.xib */; };
-		BAACE9C118976BA40099536E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACE9C018976BA40099536E /* DetailViewController.m */; };
-		BAACE9F6189999510099536E /* WeatherItems.m in Sources */ = {isa = PBXBuildFile; fileRef = BAACE9F5189999510099536E /* WeatherItems.m */; };
+		BAB9B410189B3DB200C9F708 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAB9B40F189B3DB200C9F708 /* DetailView.xib */; };
+		BAB9B413189B3DD600C9F708 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB9B412189B3DD600C9F708 /* DetailViewController.m */; };
+		BAB9B416189B3DF200C9F708 /* WeatherItems.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB9B415189B3DF200C9F708 /* WeatherItems.m */; };
+		BABEB595189B3CEB0023F7D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABEB594189B3CEB0023F7D7 /* UIKit.framework */; };
+		BABEB597189B3CEB0023F7D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABEB596189B3CEB0023F7D7 /* Foundation.framework */; };
+		BABEB599189B3CEB0023F7D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABEB598189B3CEB0023F7D7 /* CoreGraphics.framework */; };
+		BABEB59F189B3CEB0023F7D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BABEB59D189B3CEB0023F7D7 /* InfoPlist.strings */; };
+		BABEB5A1189B3CEB0023F7D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BABEB5A0189B3CEB0023F7D7 /* main.m */; };
+		BABEB5A5189B3CEB0023F7D7 /* MDF1AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BABEB5A4189B3CEB0023F7D7 /* MDF1AppDelegate.m */; };
+		BABEB5A7189B3CEB0023F7D7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BABEB5A6189B3CEB0023F7D7 /* Default.png */; };
+		BABEB5A9189B3CEB0023F7D7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BABEB5A8189B3CEB0023F7D7 /* Default@2x.png */; };
+		BABEB5AB189B3CEB0023F7D7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BABEB5AA189B3CEB0023F7D7 /* Default-568h@2x.png */; };
+		BABEB5AE189B3CEB0023F7D7 /* MDF1FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABEB5AD189B3CEB0023F7D7 /* MDF1FirstViewController.m */; };
+		BABEB5B0189B3CEB0023F7D7 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = BABEB5AF189B3CEB0023F7D7 /* first.png */; };
+		BABEB5B2189B3CEB0023F7D7 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BABEB5B1189B3CEB0023F7D7 /* first@2x.png */; };
+		BABEB5B5189B3CEB0023F7D7 /* MDF1SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABEB5B4189B3CEB0023F7D7 /* MDF1SecondViewController.m */; };
+		BABEB5B7189B3CEB0023F7D7 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = BABEB5B6189B3CEB0023F7D7 /* second.png */; };
+		BABEB5B9189B3CEB0023F7D7 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BABEB5B8189B3CEB0023F7D7 /* second@2x.png */; };
+		BABEB5BF189B3CEB0023F7D7 /* MDF1FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BABEB5BD189B3CEB0023F7D7 /* MDF1FirstViewController_iPad.xib */; };
+		BABEB5C5189B3CEB0023F7D7 /* MDF1SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BABEB5C3189B3CEB0023F7D7 /* MDF1SecondViewController_iPad.xib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		BAACE9A818975BE40099536E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BAACE96118975BE30099536E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BAACE96818975BE30099536E;
-			remoteInfo = MDF1Project4;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		BAACE96918975BE30099536E /* MDF1Project4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDF1Project4.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAACE96C18975BE30099536E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		BAACE96E18975BE30099536E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		BAACE97018975BE30099536E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		BAACE97418975BE30099536E /* MDF1Project4-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MDF1Project4-Info.plist"; sourceTree = "<group>"; };
-		BAACE97618975BE30099536E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BAACE97818975BE30099536E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BAACE97A18975BE30099536E /* MDF1Project4-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MDF1Project4-Prefix.pch"; sourceTree = "<group>"; };
-		BAACE97B18975BE30099536E /* MDF1AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDF1AppDelegate.h; sourceTree = "<group>"; };
-		BAACE97C18975BE30099536E /* MDF1AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDF1AppDelegate.m; sourceTree = "<group>"; };
-		BAACE97E18975BE30099536E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		BAACE98018975BE30099536E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		BAACE98218975BE30099536E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		BAACE98418975BE30099536E /* MDF1FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDF1FirstViewController.h; sourceTree = "<group>"; };
-		BAACE98518975BE30099536E /* MDF1FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDF1FirstViewController.m; sourceTree = "<group>"; };
-		BAACE98718975BE30099536E /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		BAACE98918975BE30099536E /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		BAACE98B18975BE30099536E /* MDF1SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDF1SecondViewController.h; sourceTree = "<group>"; };
-		BAACE98C18975BE30099536E /* MDF1SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDF1SecondViewController.m; sourceTree = "<group>"; };
-		BAACE98E18975BE30099536E /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		BAACE99018975BE30099536E /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		BAACE99618975BE30099536E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MDF1FirstViewController_iPad.xib; sourceTree = "<group>"; };
-		BAACE99C18975BE40099536E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MDF1SecondViewController_iPad.xib; sourceTree = "<group>"; };
-		BAACE9A318975BE40099536E /* MDF1Project4Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MDF1Project4Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAACE9A418975BE40099536E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		BAACE9AC18975BE40099536E /* MDF1Project4Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MDF1Project4Tests-Info.plist"; sourceTree = "<group>"; };
-		BAACE9AE18975BE40099536E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BAACE9B018975BE40099536E /* MDF1Project4Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDF1Project4Tests.h; sourceTree = "<group>"; };
-		BAACE9B118975BE40099536E /* MDF1Project4Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDF1Project4Tests.m; sourceTree = "<group>"; };
-		BAACE9BD18976B920099536E /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
-		BAACE9BF18976BA40099536E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		BAACE9C018976BA40099536E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		BAACE9F4189999510099536E /* WeatherItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherItems.h; sourceTree = "<group>"; };
-		BAACE9F5189999510099536E /* WeatherItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherItems.m; sourceTree = "<group>"; };
+		BAB9B40F189B3DB200C9F708 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		BAB9B411189B3DD600C9F708 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		BAB9B412189B3DD600C9F708 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		BAB9B414189B3DF200C9F708 /* WeatherItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherItems.h; sourceTree = "<group>"; };
+		BAB9B415189B3DF200C9F708 /* WeatherItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherItems.m; sourceTree = "<group>"; };
+		BABEB591189B3CEB0023F7D7 /* MDF1Project4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDF1Project4.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BABEB594189B3CEB0023F7D7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BABEB596189B3CEB0023F7D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BABEB598189B3CEB0023F7D7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BABEB59C189B3CEB0023F7D7 /* MDF1Project4-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MDF1Project4-Info.plist"; sourceTree = "<group>"; };
+		BABEB59E189B3CEB0023F7D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BABEB5A0189B3CEB0023F7D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BABEB5A2189B3CEB0023F7D7 /* MDF1Project4-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MDF1Project4-Prefix.pch"; sourceTree = "<group>"; };
+		BABEB5A3189B3CEB0023F7D7 /* MDF1AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDF1AppDelegate.h; sourceTree = "<group>"; };
+		BABEB5A4189B3CEB0023F7D7 /* MDF1AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDF1AppDelegate.m; sourceTree = "<group>"; };
+		BABEB5A6189B3CEB0023F7D7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BABEB5A8189B3CEB0023F7D7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		BABEB5AA189B3CEB0023F7D7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BABEB5AC189B3CEB0023F7D7 /* MDF1FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDF1FirstViewController.h; sourceTree = "<group>"; };
+		BABEB5AD189B3CEB0023F7D7 /* MDF1FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDF1FirstViewController.m; sourceTree = "<group>"; };
+		BABEB5AF189B3CEB0023F7D7 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		BABEB5B1189B3CEB0023F7D7 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		BABEB5B3189B3CEB0023F7D7 /* MDF1SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDF1SecondViewController.h; sourceTree = "<group>"; };
+		BABEB5B4189B3CEB0023F7D7 /* MDF1SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDF1SecondViewController.m; sourceTree = "<group>"; };
+		BABEB5B6189B3CEB0023F7D7 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		BABEB5B8189B3CEB0023F7D7 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		BABEB5BE189B3CEB0023F7D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MDF1FirstViewController_iPad.xib; sourceTree = "<group>"; };
+		BABEB5C4189B3CEB0023F7D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MDF1SecondViewController_iPad.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BAACE96618975BE30099536E /* Frameworks */ = {
+		BABEB58E189B3CEB0023F7D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAACE96D18975BE30099536E /* UIKit.framework in Frameworks */,
-				BAACE96F18975BE30099536E /* Foundation.framework in Frameworks */,
-				BAACE97118975BE30099536E /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BAACE99F18975BE40099536E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BAACE9A518975BE40099536E /* SenTestingKit.framework in Frameworks */,
-				BAACE9A618975BE40099536E /* UIKit.framework in Frameworks */,
-				BAACE9A718975BE40099536E /* Foundation.framework in Frameworks */,
+				BABEB595189B3CEB0023F7D7 /* UIKit.framework in Frameworks */,
+				BABEB597189B3CEB0023F7D7 /* Foundation.framework in Frameworks */,
+				BABEB599189B3CEB0023F7D7 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BAACE96018975BE30099536E = {
+		BABEB588189B3CEB0023F7D7 = {
 			isa = PBXGroup;
 			children = (
-				BAACE97218975BE30099536E /* MDF1Project4 */,
-				BAACE9AA18975BE40099536E /* MDF1Project4Tests */,
-				BAACE96B18975BE30099536E /* Frameworks */,
-				BAACE96A18975BE30099536E /* Products */,
+				BABEB59A189B3CEB0023F7D7 /* MDF1Project4 */,
+				BABEB593189B3CEB0023F7D7 /* Frameworks */,
+				BABEB592189B3CEB0023F7D7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BAACE96A18975BE30099536E /* Products */ = {
+		BABEB592189B3CEB0023F7D7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BAACE96918975BE30099536E /* MDF1Project4.app */,
-				BAACE9A318975BE40099536E /* MDF1Project4Tests.octest */,
+				BABEB591189B3CEB0023F7D7 /* MDF1Project4.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BAACE96B18975BE30099536E /* Frameworks */ = {
+		BABEB593189B3CEB0023F7D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BAACE96C18975BE30099536E /* UIKit.framework */,
-				BAACE96E18975BE30099536E /* Foundation.framework */,
-				BAACE97018975BE30099536E /* CoreGraphics.framework */,
-				BAACE9A418975BE40099536E /* SenTestingKit.framework */,
+				BABEB594189B3CEB0023F7D7 /* UIKit.framework */,
+				BABEB596189B3CEB0023F7D7 /* Foundation.framework */,
+				BABEB598189B3CEB0023F7D7 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BAACE97218975BE30099536E /* MDF1Project4 */ = {
+		BABEB59A189B3CEB0023F7D7 /* MDF1Project4 */ = {
 			isa = PBXGroup;
 			children = (
-				BAACE97B18975BE30099536E /* MDF1AppDelegate.h */,
-				BAACE97C18975BE30099536E /* MDF1AppDelegate.m */,
-				BAACE98418975BE30099536E /* MDF1FirstViewController.h */,
-				BAACE98518975BE30099536E /* MDF1FirstViewController.m */,
-				BAACE99518975BE30099536E /* MDF1FirstViewController_iPad.xib */,
-				BAACE98718975BE30099536E /* first.png */,
-				BAACE98918975BE30099536E /* first@2x.png */,
-				BAACE98B18975BE30099536E /* MDF1SecondViewController.h */,
-				BAACE98C18975BE30099536E /* MDF1SecondViewController.m */,
-				BAACE99B18975BE40099536E /* MDF1SecondViewController_iPad.xib */,
-				BAACE98E18975BE30099536E /* second.png */,
-				BAACE99018975BE30099536E /* second@2x.png */,
-				BAACE97318975BE30099536E /* Supporting Files */,
-				BAACE9BF18976BA40099536E /* DetailViewController.h */,
-				BAACE9C018976BA40099536E /* DetailViewController.m */,
-				BAACE9BD18976B920099536E /* DetailView.xib */,
-				BAACE9F4189999510099536E /* WeatherItems.h */,
-				BAACE9F5189999510099536E /* WeatherItems.m */,
+				BABEB5A3189B3CEB0023F7D7 /* MDF1AppDelegate.h */,
+				BABEB5A4189B3CEB0023F7D7 /* MDF1AppDelegate.m */,
+				BABEB5AC189B3CEB0023F7D7 /* MDF1FirstViewController.h */,
+				BABEB5AD189B3CEB0023F7D7 /* MDF1FirstViewController.m */,
+				BABEB5BD189B3CEB0023F7D7 /* MDF1FirstViewController_iPad.xib */,
+				BABEB5AF189B3CEB0023F7D7 /* first.png */,
+				BABEB5B1189B3CEB0023F7D7 /* first@2x.png */,
+				BABEB5B3189B3CEB0023F7D7 /* MDF1SecondViewController.h */,
+				BABEB5B4189B3CEB0023F7D7 /* MDF1SecondViewController.m */,
+				BABEB5C3189B3CEB0023F7D7 /* MDF1SecondViewController_iPad.xib */,
+				BABEB5B6189B3CEB0023F7D7 /* second.png */,
+				BABEB5B8189B3CEB0023F7D7 /* second@2x.png */,
+				BABEB59B189B3CEB0023F7D7 /* Supporting Files */,
+				BAB9B411189B3DD600C9F708 /* DetailViewController.h */,
+				BAB9B412189B3DD600C9F708 /* DetailViewController.m */,
+				BAB9B40F189B3DB200C9F708 /* DetailView.xib */,
+				BAB9B414189B3DF200C9F708 /* WeatherItems.h */,
+				BAB9B415189B3DF200C9F708 /* WeatherItems.m */,
 			);
 			path = MDF1Project4;
 			sourceTree = "<group>";
 		};
-		BAACE97318975BE30099536E /* Supporting Files */ = {
+		BABEB59B189B3CEB0023F7D7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BAACE97418975BE30099536E /* MDF1Project4-Info.plist */,
-				BAACE97518975BE30099536E /* InfoPlist.strings */,
-				BAACE97818975BE30099536E /* main.m */,
-				BAACE97A18975BE30099536E /* MDF1Project4-Prefix.pch */,
-				BAACE97E18975BE30099536E /* Default.png */,
-				BAACE98018975BE30099536E /* Default@2x.png */,
-				BAACE98218975BE30099536E /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BAACE9AA18975BE40099536E /* MDF1Project4Tests */ = {
-			isa = PBXGroup;
-			children = (
-				BAACE9B018975BE40099536E /* MDF1Project4Tests.h */,
-				BAACE9B118975BE40099536E /* MDF1Project4Tests.m */,
-				BAACE9AB18975BE40099536E /* Supporting Files */,
-			);
-			path = MDF1Project4Tests;
-			sourceTree = "<group>";
-		};
-		BAACE9AB18975BE40099536E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BAACE9AC18975BE40099536E /* MDF1Project4Tests-Info.plist */,
-				BAACE9AD18975BE40099536E /* InfoPlist.strings */,
+				BABEB59C189B3CEB0023F7D7 /* MDF1Project4-Info.plist */,
+				BABEB59D189B3CEB0023F7D7 /* InfoPlist.strings */,
+				BABEB5A0189B3CEB0023F7D7 /* main.m */,
+				BABEB5A2189B3CEB0023F7D7 /* MDF1Project4-Prefix.pch */,
+				BABEB5A6189B3CEB0023F7D7 /* Default.png */,
+				BABEB5A8189B3CEB0023F7D7 /* Default@2x.png */,
+				BABEB5AA189B3CEB0023F7D7 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -196,13 +143,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BAACE96818975BE30099536E /* MDF1Project4 */ = {
+		BABEB590189B3CEB0023F7D7 /* MDF1Project4 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BAACE9B518975BE40099536E /* Build configuration list for PBXNativeTarget "MDF1Project4" */;
+			buildConfigurationList = BABEB5C8189B3CEB0023F7D7 /* Build configuration list for PBXNativeTarget "MDF1Project4" */;
 			buildPhases = (
-				BAACE96518975BE30099536E /* Sources */,
-				BAACE96618975BE30099536E /* Frameworks */,
-				BAACE96718975BE30099536E /* Resources */,
+				BABEB58D189B3CEB0023F7D7 /* Sources */,
+				BABEB58E189B3CEB0023F7D7 /* Frameworks */,
+				BABEB58F189B3CEB0023F7D7 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -210,170 +157,102 @@
 			);
 			name = MDF1Project4;
 			productName = MDF1Project4;
-			productReference = BAACE96918975BE30099536E /* MDF1Project4.app */;
+			productReference = BABEB591189B3CEB0023F7D7 /* MDF1Project4.app */;
 			productType = "com.apple.product-type.application";
-		};
-		BAACE9A218975BE40099536E /* MDF1Project4Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BAACE9B818975BE40099536E /* Build configuration list for PBXNativeTarget "MDF1Project4Tests" */;
-			buildPhases = (
-				BAACE99E18975BE40099536E /* Sources */,
-				BAACE99F18975BE40099536E /* Frameworks */,
-				BAACE9A018975BE40099536E /* Resources */,
-				BAACE9A118975BE40099536E /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BAACE9A918975BE40099536E /* PBXTargetDependency */,
-			);
-			name = MDF1Project4Tests;
-			productName = MDF1Project4Tests;
-			productReference = BAACE9A318975BE40099536E /* MDF1Project4Tests.octest */;
-			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BAACE96118975BE30099536E /* Project object */ = {
+		BABEB589189B3CEB0023F7D7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = MDF1;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Brenna Pavlinchak";
 			};
-			buildConfigurationList = BAACE96418975BE30099536E /* Build configuration list for PBXProject "MDF1Project4" */;
+			buildConfigurationList = BABEB58C189B3CEB0023F7D7 /* Build configuration list for PBXProject "MDF1Project4" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = BAACE96018975BE30099536E;
-			productRefGroup = BAACE96A18975BE30099536E /* Products */;
+			mainGroup = BABEB588189B3CEB0023F7D7;
+			productRefGroup = BABEB592189B3CEB0023F7D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BAACE96818975BE30099536E /* MDF1Project4 */,
-				BAACE9A218975BE40099536E /* MDF1Project4Tests */,
+				BABEB590189B3CEB0023F7D7 /* MDF1Project4 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BAACE96718975BE30099536E /* Resources */ = {
+		BABEB58F189B3CEB0023F7D7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAACE97718975BE30099536E /* InfoPlist.strings in Resources */,
-				BAACE97F18975BE30099536E /* Default.png in Resources */,
-				BAACE98118975BE30099536E /* Default@2x.png in Resources */,
-				BAACE98318975BE30099536E /* Default-568h@2x.png in Resources */,
-				BAACE98818975BE30099536E /* first.png in Resources */,
-				BAACE98A18975BE30099536E /* first@2x.png in Resources */,
-				BAACE98F18975BE30099536E /* second.png in Resources */,
-				BAACE99118975BE30099536E /* second@2x.png in Resources */,
-				BAACE99718975BE30099536E /* MDF1FirstViewController_iPad.xib in Resources */,
-				BAACE99D18975BE40099536E /* MDF1SecondViewController_iPad.xib in Resources */,
-				BAACE9BE18976B920099536E /* DetailView.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BAACE9A018975BE40099536E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BAACE9AF18975BE40099536E /* InfoPlist.strings in Resources */,
+				BABEB59F189B3CEB0023F7D7 /* InfoPlist.strings in Resources */,
+				BABEB5A7189B3CEB0023F7D7 /* Default.png in Resources */,
+				BABEB5A9189B3CEB0023F7D7 /* Default@2x.png in Resources */,
+				BABEB5AB189B3CEB0023F7D7 /* Default-568h@2x.png in Resources */,
+				BABEB5B0189B3CEB0023F7D7 /* first.png in Resources */,
+				BABEB5B2189B3CEB0023F7D7 /* first@2x.png in Resources */,
+				BABEB5B7189B3CEB0023F7D7 /* second.png in Resources */,
+				BABEB5B9189B3CEB0023F7D7 /* second@2x.png in Resources */,
+				BABEB5BF189B3CEB0023F7D7 /* MDF1FirstViewController_iPad.xib in Resources */,
+				BABEB5C5189B3CEB0023F7D7 /* MDF1SecondViewController_iPad.xib in Resources */,
+				BAB9B410189B3DB200C9F708 /* DetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		BAACE9A118975BE40099536E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		BAACE96518975BE30099536E /* Sources */ = {
+		BABEB58D189B3CEB0023F7D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAACE97918975BE30099536E /* main.m in Sources */,
-				BAACE97D18975BE30099536E /* MDF1AppDelegate.m in Sources */,
-				BAACE98618975BE30099536E /* MDF1FirstViewController.m in Sources */,
-				BAACE98D18975BE30099536E /* MDF1SecondViewController.m in Sources */,
-				BAACE9C118976BA40099536E /* DetailViewController.m in Sources */,
-				BAACE9F6189999510099536E /* WeatherItems.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BAACE99E18975BE40099536E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BAACE9B218975BE40099536E /* MDF1Project4Tests.m in Sources */,
+				BABEB5A1189B3CEB0023F7D7 /* main.m in Sources */,
+				BABEB5A5189B3CEB0023F7D7 /* MDF1AppDelegate.m in Sources */,
+				BABEB5AE189B3CEB0023F7D7 /* MDF1FirstViewController.m in Sources */,
+				BABEB5B5189B3CEB0023F7D7 /* MDF1SecondViewController.m in Sources */,
+				BAB9B413189B3DD600C9F708 /* DetailViewController.m in Sources */,
+				BAB9B416189B3DF200C9F708 /* WeatherItems.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		BAACE9A918975BE40099536E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BAACE96818975BE30099536E /* MDF1Project4 */;
-			targetProxy = BAACE9A818975BE40099536E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		BAACE97518975BE30099536E /* InfoPlist.strings */ = {
+		BABEB59D189B3CEB0023F7D7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BAACE97618975BE30099536E /* en */,
+				BABEB59E189B3CEB0023F7D7 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		BAACE99518975BE30099536E /* MDF1FirstViewController_iPad.xib */ = {
+		BABEB5BD189B3CEB0023F7D7 /* MDF1FirstViewController_iPad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BAACE99618975BE30099536E /* en */,
+				BABEB5BE189B3CEB0023F7D7 /* en */,
 			);
 			name = MDF1FirstViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
-		BAACE99B18975BE40099536E /* MDF1SecondViewController_iPad.xib */ = {
+		BABEB5C3189B3CEB0023F7D7 /* MDF1SecondViewController_iPad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BAACE99C18975BE40099536E /* en */,
+				BABEB5C4189B3CEB0023F7D7 /* en */,
 			);
 			name = MDF1SecondViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
-		BAACE9AD18975BE40099536E /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BAACE9AE18975BE40099536E /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BAACE9B318975BE40099536E /* Debug */ = {
+		BABEB5C6189B3CEB0023F7D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -405,7 +284,7 @@
 			};
 			name = Debug;
 		};
-		BAACE9B418975BE40099536E /* Release */ = {
+		BABEB5C7189B3CEB0023F7D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -431,7 +310,7 @@
 			};
 			name = Release;
 		};
-		BAACE9B618975BE40099536E /* Debug */ = {
+		BABEB5C9189B3CEB0023F7D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -442,7 +321,7 @@
 			};
 			name = Debug;
 		};
-		BAACE9B718975BE40099536E /* Release */ = {
+		BABEB5CA189B3CEB0023F7D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -450,74 +329,31 @@
 				INFOPLIST_FILE = "MDF1Project4/MDF1Project4-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		BAACE9B918975BE40099536E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MDF1Project4.app/MDF1Project4";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MDF1Project4/MDF1Project4-Prefix.pch";
-				INFOPLIST_FILE = "MDF1Project4Tests/MDF1Project4Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		BAACE9BA18975BE40099536E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MDF1Project4.app/MDF1Project4";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MDF1Project4/MDF1Project4-Prefix.pch";
-				INFOPLIST_FILE = "MDF1Project4Tests/MDF1Project4Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BAACE96418975BE30099536E /* Build configuration list for PBXProject "MDF1Project4" */ = {
+		BABEB58C189B3CEB0023F7D7 /* Build configuration list for PBXProject "MDF1Project4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BAACE9B318975BE40099536E /* Debug */,
-				BAACE9B418975BE40099536E /* Release */,
+				BABEB5C6189B3CEB0023F7D7 /* Debug */,
+				BABEB5C7189B3CEB0023F7D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BAACE9B518975BE40099536E /* Build configuration list for PBXNativeTarget "MDF1Project4" */ = {
+		BABEB5C8189B3CEB0023F7D7 /* Build configuration list for PBXNativeTarget "MDF1Project4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BAACE9B618975BE40099536E /* Debug */,
-				BAACE9B718975BE40099536E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BAACE9B818975BE40099536E /* Build configuration list for PBXNativeTarget "MDF1Project4Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BAACE9B918975BE40099536E /* Debug */,
-				BAACE9BA18975BE40099536E /* Release */,
+				BABEB5C9189B3CEB0023F7D7 /* Debug */,
+				BABEB5CA189B3CEB0023F7D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BAACE96118975BE30099536E /* Project object */;
+	rootObject = BABEB589189B3CEB0023F7D7 /* Project object */;
 }

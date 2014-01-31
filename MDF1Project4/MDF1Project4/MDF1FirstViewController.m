@@ -2,7 +2,7 @@
 //  MDF1FirstViewController.m
 //  MDF1Project4
 //
-//  Created by Brenna Pavlinchak on 1/27/14.
+//  Created by Brenna Pavlinchak on 1/30/14.
 //  Copyright (c) 2014 Brenna Pavlinchak. All rights reserved.
 //
 
@@ -35,7 +35,7 @@
     xmlItem = 0; //Setting messages to zero
     
     xmlURL = [[NSURL alloc]initWithString:@"http://i.wxbug.net/REST/SP/getLocationsXML.aspx?api_key=nkzvwtrrrqtnqec8tm4vqeju&SearchString=winterpark"]; //We are creating the URL
-                                                                                              //I wanted a better weather API, but this is the only link that i could get to work
+    //I wanted a better weather API, but this is the only link that i could get to work
     requestTheXML = [[NSURLRequest alloc] initWithURL:xmlURL]; //
     
     if(requestTheXML != nil)
@@ -77,7 +77,7 @@
             }
         }
         
-        //NSLog(@"%@", requestTheString); //Testing to see if the xml gets requested correctly
+        NSLog(@"%@", requestTheString); //Testing to see if the xml gets requested correctly
     }
     //Starting the parsing
     NSXMLParser *xmlParse = [[NSXMLParser alloc] initWithData:requestTheData]; //We are starting to parse the data we just collected
@@ -88,7 +88,7 @@
         [xmlParse parse];
     }
     //reload tableview with parsed data
-    [tableView reloadData];
+    [myTableView reloadData];
     
 }
 
@@ -156,7 +156,7 @@
         
         [weather removeObjectAtIndex:indexPath.row];
         
-        [tableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:TRUE];
+        [myTableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:TRUE];
     }
 }
 
@@ -170,7 +170,7 @@
 {
     static NSString  *cellIdentity = @"Cell";
     
-    UITableViewCell *cellRow  = [tableView dequeueReusableCellWithIdentifier: cellIdentity];
+    UITableViewCell *cellRow  = [myTableView dequeueReusableCellWithIdentifier: cellIdentity];
     
     if(cellRow == nil)
     {
@@ -209,13 +209,13 @@
 {
     if(editMode == FALSE) //Ask what type of editing mode
     {
-        [tableView setEditing:TRUE];
+        [myTableView setEditing:TRUE];
         [editButton setTitle:@"Finish" forState: UIControlStateNormal];
         editMode = TRUE; //Reset to not be in editing mode
     }
     else
     {
-        [tableView setEditing:FALSE];
+        [myTableView setEditing:FALSE];
         [editButton setTitle:@"Edit" forState:UIControlStateNormal];
         editMode = FALSE;
     }
